@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="style.css" rel="stylesheet">
+    <script src="qcm.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>QCM</h1>
+      <h2>validez vos connaissances</h2>
+    </header>
+
+    <nav>
+      <a href="index.html" class="centernav">Page d'acceuil</a>
+      <ol>
+        <li>Les langages bas niveaux</li>
+        <ul>
+          <li> <a href="les_debuts/machine.html">Langages machines</a> </li>
+          <li> <a href="les_debuts/asm.html">Langages assembleurs</a> </li>
+        </ul>
+        <li>Les langages haut niveaux (compilés)</li>
+        <ul>
+          <li> <a href="les_compilateurs/fortran.html">FORTRAN</a> </li>
+          <li> <a href="les_compilateurs/basic.html">BASIC</a> </li>
+          <li> <a href="les_compilateurs/c.html">C</a> </li>
+          <li> <a href="les_compilateurs/pascal.html">Pascal</a> </li>
+        </ul>
+
+        <li>Les langages de POO (Programmation Orientée Objet)</li>
+        <ul>
+          <li> <a href="programmation_objet/ada.html">Ada</a> </li>
+          <li> <a href="programmation_objet/cpp.html">C++</a> </li>
+          <li> <a href="programmation_objet/perl.html">Perl</a> </li>
+        </ul>
+
+        <li>Les langages "scripts"</li>
+        <ul>
+          <li> <a href="programmation_script/python.html">Python</a> </li>
+          <li> <a href="Programmation_script/ruby.html">Ruby</a> </li>
+          <li> <a href="programmation_script/lua.html">Lua</a> </li>
+          <li> <a href="programmation_script/js.html">JavaScript</a> </li>
+          <li> <a href="programmation_script/cs.html">C#</a> </li>
+        </ul>
+
+        <li>Hors série</li>
+        <ul>
+          <li> <a href="hors_serie/java.html">Java</a> </li>
+          <li> <strong>QCM</strong> </li>
+          <li> <a href="sources.html">Sources</a> </li>
+        </ul>
+      </ol>
+    </nav>
+
+    <main>
+      <form id="questionchoice" onsubmit="return fetchquestion(document.getElementById('questionnum'))">
+        <label for="questionnum">Entrez le numéro de la question: </label>
+        <input type="number" id="questionnum" value="1" min="1" max="6">
+        <input type="submit" value="Afficher la question">
+      </form>
+
+      <form id="question1" style="display: none;" onsubmit="event.preventDefault();answer(1)">
+        <p>Question 1</p>
+        <p>le langage machine est...</p> <br/>
+
+        <input/ type="radio" id="question1one" name="question1">
+        <label for="question1one">le langage du processeur</label> <br/>
+
+        <input/ type="radio" id="question1two" name="question1">
+        <label for="question1two">le langage du navigateur web</label> <br/>
+
+        <input/ type="radio" id="question1three" name="question1">
+        <label for="question1three">simplement un charabia sans aucun sens</label> <br/>
+
+        <input/ type="radio" id="question1four" name="question1">
+        <label for="question1four">un langage de script</label> <br/>
+
+        <input type="submit">
+      </form>
+
+      <form id="question2" style="display: none;" onsubmit="event.preventDefault();answer(2)">
+        <p>Question 2</p>
+        <p>le premier langage de programmation dit "compilable" est...</p> <br/>
+
+        <input/ type="radio" id="question2one" name="question2">
+        <label for="question2one">l'assembleur</label> <br/>
+
+        <input/ type="radio" id="question2two" name="question2">
+        <label for="question2two">le C</label> <br/>
+
+        <input/ type="radio" id="question2three" name="question2">
+        <label for="question2three">le FORTRAN</label> <br/>
+
+        <input/ type="radio" id="question2four" name="question2">
+        <label for="question2four">le BASIC</label> <br/>
+
+        <input type="submit">
+      </form>
+
+      <form id="question3" style="display: none;" onsubmit="event.preventDefault();answer(3)">
+        <p>Question 3</p>
+        <p>l'Ada se nomme "Ada" parceque...</p> <br/>
+
+        <input/ type="radio" id="question3one" name="question3">
+        <label for="question3one">il fait référence à Adam</label> <br/>
+
+        <input/ type="radio" id="question3two" name="question3">
+        <label for="question3two">c'est un mot en latin</label> <br/>
+
+        <input/ type="radio" id="question3three" name="question3">
+        <label for="question3three">c'est le nom de la toute première programmeuse existante</label> <br/>
+
+        <input/ type="radio" id="question3four" name="question3">
+        <label for="question3four">c'est un choix arbitraire</label> <br/>
+
+        <input type="submit">
+
+      </form>
+
+      <form id="question4" style="display: none;" onsubmit="event.preventDefault();answer(4)">
+        <p>Question4</p>
+        <p>le "++" dans C++ est...</p> <br/>
+
+        <input/ type="radio" id="question4one" name="question4">
+        <label for="question4one">c'est une faute de frappe, ils voulaient le nommer "C+"</label> <br/>
+
+        <input/ type="radio" id="question4two" name="question4">
+        <label for="question4two">une blague de développeur, pour sous entendre que c'est une amélioration du C</label> <br/>
+
+        <input/ type="radio" id="question4three" name="question4">
+        <label for="question4three">à la base il devait s'appeler C*, en référence aux pointeurs, mais il fut rempplacé par 2 + car l'assemblage de ces deux donne une étoile</label> <br/>
+
+        <input/ type="radio" id="question4four" name="question4">
+        <label for="question4four">c'est seulement car deux "+" semblaient mieux que un seul</label> <br/>
+
+        <input type="submit">
+      </form>
+
+      <form id="question5" style="display: none;" onsubmit="return answer(5,event)">
+        <p>Question 5</p>
+        <p>combien de langages assembleurs existe-t-il?</p>
+
+        <input/ type="radio" id="question5one" name="question5">
+        <label for="question5one">10</label> <br/>
+
+        <input/ type="radio" id="question5two" name="question5">
+        <label for="question5two">aucun</label> <br/>
+
+        <input/ type="radio" id="question5three" name="question5">
+        <label for="question5three">100</label> <br/>
+
+        <input/ type="radio" id="question5four" name="question5">
+        <label for="question5four">autant que il y a de famille de processeurs existants</label> <br/>
+
+        <input type="submit">
+      </form>
+
+      <form id="question6" style="display: none;" onsubmit="return answer(6,event)">
+        <p>Question 6</p>
+        <p>l'inventeur du Ruby à inventé son langage car...</p> <br/>
+
+        <input/ type="radio" id="question6one" name="question6">
+        <label for="question6one">il était frustré dû à des surprises dans d'autres langages</label> <br/>
+
+        <input/ type="radio" id="question6two" name="question6">
+        <label for="question6two">il s'ennuyait</label> <br/>
+
+        <input/ type="radio" id="question6three" name="question6">
+        <label for="question6three">il était curieux de savoir comment créer un langage</label> <br/>
+
+        <input/ type="radio" id="question6four" name="question6">
+        <label for="question6four">il voulait montrer ses capacités en programmation</label> <br/>
+
+        <input type="submit">
+      </form>
+
+      <span id="correct" style="display: none;">Exact!</span>
+      <span id="incorrect" style="display: none;">Echec!</span> <br/>
+
+      <span id="grade">score: 0/0</span>
+    </main>
+
+    <div class="liens">
+      <div class="last">
+        <a class="last" href="hors_serie/java.html"><- 5. Java</a>
+      </div>
+
+      <div class="next">
+        <a class="next" href="sources.html">Sources -></a>
+      </div>
+    </div>
+
+    <footer>
+      <a class="footerlink" href="https://plaine-ain.ent.auvergnerhonealpes.fr">Le site du Lycée de la Plaine de l'Ain</a>
+    </footer>
+  </body>
+</html>

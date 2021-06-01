@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=fr dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>langage machine</title>
+
+    <link href="../style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <h1>Langages machines</h1>
+      <h2>Les langages en binaire pur.</h2>
+    </header>
+
+    <nav>
+      <a href="../index.html" class="centernav">Page d'accueil</a>
+      <ol>
+        <li>Les langages bas niveaux</li>
+        <ul>
+            <li> <strong>Langages machines</strong> </li>
+            <li> <a href="asm.html">Langages assembleurs</a> </li>
+        </ul>
+
+        <li>Les langages haut niveaux (compilés)</li>
+        <ul>
+          <li> <a href="../les_compilateurs/fortran.html">FORTRAN</a> </li>
+          <li> <a href="../les_compilateurs/basic.html">BASIC</a> </li>
+          <li> <a href="../les_compilateurs/c.html">C</a> </li>
+          <li> <a href="../les_compilateurs/pascal.html">Pascal</a> </li>
+        </ul>
+
+        <li>Les langages de POO (Programmation Orientée Objet)</li>
+        <ul>
+          <li> <a href="../programmation_objet/ada.html">Ada</a> </li>
+          <li> <a href="../programmation_objet/cpp.html">C++</a> </li>
+          <li> <a href="../programmation_objet/perl.html">Perl</a> </li>
+        </ul>
+
+        <li>Les langages "scripts"</li>
+        <ul>
+          <li> <a href="../programmation_script/python.html">Python</a> </li>
+          <li> <a href="../Programmation_script/ruby.html">Ruby</a> </li>
+          <li> <a href="../programmation_script/lua.html">Lua</a> </li>
+          <li> <a href="../programmation_script/js.html">JavaScript</a> </li>
+          <li> <a href="../programmation_script/cs.html">C#</a> </li>
+        </ul>
+
+        <li>Hors série</li>
+        <ul>
+          <li> <a href="../hors_serie/java.html">Java</a> </li>
+          <li> <a href="../qcm.html">QCM</a> </li>
+          <li> <a href="../sources.html">Sources</a> </li>
+        </ul>
+      </ol>
+
+    </nav>
+
+    <main>
+
+      <p>
+        Le tout premier "langage" informatique existant n'était pas vraiment un langage compréhensible, il était appelé le langage machine, ou plus communément aujourd'hui, "binaire". C'est le plus bas niveau existant en programmation, les instructions pour le processeur dans ce langage sont directement écris en binaire, lorsqu'on essaye de lire un fichier en langage machine, on y comprends rien, car chaque caractère représente en fait du code en binaire/langage machine.<br><br>
+        En effet, le langage machine est en réalité le langage que le processeur comprends, cela signifie donc que un programmeur qui développe dans ce langage parle directement au processeur, sans aucune couche d'abstraction, sans aucun "traducteur". <br><br>
+        Les instructions du langages se décomposent souvent en 2 parties, la première est "l'opcode", soit le code correspondant à l'instruction utilisée, et la seconde partie est les arguments de cette instruction. <br><br>
+        Par exemple, en <strong>x86</strong>, l'opcode 0x6A (en binaire 01101010) correspond à une instruction nommée "push", (ajouter une valeur au dessus d'une section de mémoire un peu spéciale appelée la "pile"), elle prends en argument une valeure, qui sera donc stockée en mémoire. (si on veux par exemple mettre 0x14 au dessus de la pile (00010100 en binaire), on ferait donc 0x6A 0x14 (ou 01101010 00010100 en binaire), on remarque que l'instruction est décomposée en deux valeurs distinctes (même si dans la mémoire, les bits ne sont pas séparés, ils sont tous les un après les autres.)). <br><br>
+        Ce langage fut principalement utilisé lors de la naissance des ordinateurs, lorsque il n'y avait encore aucune autre alternative disponible, ou possible d'ailleurs. il est donc considéré comme un langage de première génération, et un des seuls existants (sauf si l'on considère chaque langage machine de processeur comme un langage différent).
+      </p>
+    </main>
+
+    <div class="liens">
+      <div class="last">
+        <a class="last" href="../index.html"><- Page d'acceuil</a>
+      </div>
+
+      <div class="next">
+        <a class="next" href="asm.html">Assembleur -></a>
+      </div>
+    </div>
+
+    <footer>
+      <a class="footerlink" href="https://plaine-ain.ent.auvergnerhonealpes.fr">Le site du Lycée de la Plaine de l'Ain</a>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  display: grid; /*cela permet de s'assurer que l'entiereté de l'affichage se fait en mode "grid" soit calé sur une grille, qui sera générée en dessous*/
+  grid-template-columns: repeat(9, 1fr); /*génère une grille à 9 cases, de fléxibilité 1fr, cela signifie que la taille des grids peux varier de 1fr*/
+  grid-gap: 7px; /*l'écart entre les grilles sera de 7 pixels*/
+  grid-auto-rows: minmax(95px, auto); /*les lignes sont générées automatiquement entre 95px et une valeur générée automatiquement*/
+  background-color: rgb(140,90,255);
+}
+
+header, nav, main, footer {
+  background-color: rgb(200,200,200);
+}
+
+header {
+  text-align: center; /*le texte du header sera centré*/
+  border: solid; /*montrer les bordures du header*/
+  grid-column: 1 / 11; /*la grille commencera à la colomne grid 1 et finira à la colomne grid 11*/
+  grid-row: 1; /*l'élément header reste uniquement à la première ligne*/
+}
+
+nav {
+  grid-column: 1 / 2; /* l'élément nav prendra 2 espaces colomnes sur les 9 */
+  grid-row: 2 / 5; /*et 4 espaces lignes, de 2 à 6*/
+  border: solid; /*montrer les bordures du nav*/
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none; /*juste pour faire en sorte que les liens visités ne soient pas en gras*/
+  color: blue; /*et s'assurer que la couleur du texte reste bleu et ne passe pas au violet*/
+}
+
+main {
+  grid-column: 2 / 11; /*main prendra la majeure partie du centre, beaucoup plus que nav, c'est pour cela que la section main prends de la colomne 2 à 11*/
+  grid-row: 2 / 5; /*même nombres que nav, car les deux doivent faire la même taille en terme de lignes*/
+  border: solid; /*montrer les bordures de main aussi*/
+}
+
+a.next,a.last {
+  color: green;
+  text-decoration: underline;
+}
+
+.liens {
+  grid-column: 2 / 9;
+  grid-row: 5;
+  display: block;
+}
+
+.last {
+  float: left;
+  font-size: 30px;
+}
+
+.next {
+  float: right;
+  font-size: 30px;
+}
+
+footer {
+  grid-column: 1 / 11; /*le footer, tout comme le header, doit prendre tout l'espace en terme de colomnes*/
+  grid-row: 6; /*le footer reste sur une seule ligne*/
+  border: solid; /*on doit pouvoir voir les bordures du footer aussi*/
+}
+
+.footerlink {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+
+.centernav {
+  display: block; /*s'assurer que l'hyperlien pour la page d'acceuil soit en block, pour que text-align: center; fonctionne*/
+  text-align: center; /*faire en sorte que l'hyperlien de la page d'acceuil soit centré*/
+}
+
+.code {
+  color: blue;
+}
